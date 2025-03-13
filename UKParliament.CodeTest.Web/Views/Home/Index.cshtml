@@ -1,0 +1,309 @@
+﻿@model UKParliament.CodeTest.Web.Models.IndexViewModel
+
+@{
+    ViewData["Title"] = "People Manager";
+}
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between mb-3">
+        <button id="addNewPersonBtn" class="btn btn-success">Add New Person</button>
+    </div>
+
+    <div class="row">
+        <!-- People list table -->
+        <div class="col-md-7">
+            <table id="peopleTable" class="table table-hover table-bordered shadow-sm">
+                <thead class="table-dark">
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Date of Birth</th>
+                        <th>Department</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var person in Model.People)
+                    {
+                        <tr id="personRow-@person.Id"
+                            onclick="loadPerson(@person.Id, '@person.FirstName', '@person.LastName', '@person.Email', '@person.DateOfBirth?.ToString("yyyy-MM-dd")', '@person.Department?.Name')">
+                            <td>@person.FirstName</td>
+                            <td>@person.LastName</td>
+                            <td>@person.Email</td>
+                            <td>@person.DateOfBirth?.ToString("yyyy-MM-dd")</td>
+                            <td>@person.Department?.Name</td>
+                            <td>
+                                <button class="btn btn-danger btn-sm" onclick="deletePerson(@person.Id, event)">Delete</button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Editor form -->
+        <div class="col-md-5">
+            <div id="personEditor" class="card shadow-sm p-4 d-none">
+                <h3 id="formTitle" class="text-primary">View Person</h3>
+                <form id="personForm">
+                    <input type="hidden" name="Id" id="Id" value="0" />
+
+                    <div class="mb-3">
+                        <label class="form-label">First Name</label>
+                        <input type="text" class="form-control readonly-field" name="FirstName" id="FirstName" readonly />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Last Name</label>
+                        <input type="text" class="form-control readonly-field" name="LastName" id="LastName" readonly />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control readonly-field" name="Email" id="Email" readonly />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Date of Birth</label>
+                        <input type="date" class="form-control readonly-field" name="DateOfBirth" id="DateOfBirth" readonly />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Department</label>
+                        <select class="form-control readonly-field" name="DepartmentId" id="DepartmentId" disabled>
+                            <option value="">-- Select Department --</option>
+                            @foreach (var dept in Model.Departments)
+                            {
+                                <option value="@dept.Id">@dept.Name</option>
+                            }
+                        </select>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <button type="button" class="btn btn-warning me-2" id="editButton" onclick="toggleEdit()">Edit</button>
+                            <button type="submit" class="btn btn-primary d-none" id="saveButton">Save</button>
+                        </div>
+                        <button type="button" class="btn btn-secondary" onclick="hideEditor()">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+
+
+    <script>
+
+        $(document).ready(function () {
+            $("#editButton").on("click", function () {
+                let firstName = $("#FirstName").val();
+                let lastName = $("#LastName").val();
+                let currentTitle = $("#formTitle").text();
+
+                if (currentTitle.startsWith("Editing")) {
+                    $("#formTitle").text("Viewing " + firstName + " " + lastName);
+                } else {
+                    $("#formTitle").text("Editing " + firstName + " " + lastName);
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            attachRowClickHandlers();
+
+            $("#addNewPersonBtn").on("click", function () {
+                resetForm();
+                toggleEdit();
+                $("#formTitle").text("Add New Person");
+                $("#personEditor").removeClass("d-none");
+            });
+
+            $("#personForm").on("submit", function (e) {
+                e.preventDefault();
+
+                if (!validateForm()) return;  // ✅ Stop submission if validation fails
+
+                var formData = $(this).serialize();
+
+                $.ajax({
+                    type: "POST",
+                    url: "@Url.Action("SavePerson", "Home")",
+                    data: formData,
+                    dataType: "json",
+                    success: function (response) {
+                        if (response && response.id) {
+                            if ($("#personRow-" + response.id).length) {
+                                updatePersonInTable(response);
+                            } else {
+                                addPersonToTable(response);
+                            }
+                            hideEditor();
+                        } else {
+                            alert("Error: Invalid server response.");
+                        }
+                    },
+                    error: function (xhr) {
+                        alert("Error: " + xhr.responseText);
+                    }
+                });
+            });
+        });
+
+        function validateForm() {
+            let isValid = true;
+
+            let firstName = $("#FirstName").val().trim();
+            let lastName = $("#LastName").val().trim();
+            let email = $("#Email").val().trim();
+            let dob = $("#DateOfBirth").val();
+            let departmentId = $("#DepartmentId").val();
+
+            // ✅ First Name & Last Name Validation (Letters Only)
+            let namePattern = @Html.Raw("/^[a-zA-Z]+$/");
+            if (!namePattern.test(firstName)) {
+                alert("First Name is required and must contain only letters.");
+                isValid = false;
+            }
+            if (!namePattern.test(lastName)) {
+                alert("Last Name is required and must contain only letters.");
+                isValid = false;
+            }
+
+            // ✅ Email Validation
+            let emailPattern = @Html.Raw("/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/");
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                isValid = false;
+            }
+
+            // ✅ Date of Birth Validation (Past Date)
+            if (!dob) {
+                alert("Date of Birth is required.");
+                isValid = false;
+            } else {
+                let dobDate = new Date(dob);
+                let today = new Date();
+                if (dobDate >= today) {
+                    alert("Date of Birth must be in the past.");
+                    isValid = false;
+                }
+            }
+
+            // ✅ Department Validation (Must Select One)
+            if (!departmentId) {
+                alert("Please select a department.");
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        function attachRowClickHandlers() {
+            $("#peopleTable tbody tr").off("click").on("click", function () {
+                var row = $(this);
+                var id = row.attr("id") ? row.attr("id").replace("personRow-", "") : null;
+                var firstName = row.find("td:nth-child(1)").text();
+                var lastName = row.find("td:nth-child(2)").text();
+                var email = row.find("td:nth-child(3)").text();
+                var dob = row.find("td:nth-child(4)").text();
+                var departmentName = row.find("td:nth-child(5)").text();
+
+                if (id) {
+                    loadPerson(id, firstName, lastName, email, dob, departmentName);
+                }
+            });
+        }
+
+        function toggleEdit() {
+            let isEditing = $("#saveButton").hasClass("d-none");
+
+            $(".readonly-field").prop("readonly", !isEditing);
+            $("#DepartmentId").prop("disabled", !isEditing);
+            $("#saveButton").toggleClass("d-none");
+            $("#editButton").text(isEditing ? "Cancel" : "Edit");
+        }
+
+        function hideEditor() {
+            $("#personEditor").addClass("d-none");
+        }
+
+        function loadPerson(id, firstName, lastName, email, dob, departmentName) {
+            $("#Id").val(id);
+            $("#FirstName").val(firstName);
+            $("#LastName").val(lastName);
+            $("#Email").val(email);
+            $("#DateOfBirth").val(dob);
+
+            $("#DepartmentId option").each(function () {
+                if ($(this).text().trim() === departmentName.trim()) {
+                    $(this).prop("selected", true);
+                }
+            });
+
+            $(".readonly-field").prop("readonly", true);
+            $("#DepartmentId").prop("disabled", true);
+            $("#saveButton").addClass("d-none");
+            $("#editButton").text("Edit");
+
+            $("#formTitle").text("Viewing " + firstName + " " + lastName);
+            $("#personEditor").removeClass("d-none");
+        }
+
+        function resetForm() {
+            $("#Id").val("0");
+            $("#FirstName").val("");
+            $("#LastName").val("");
+            $("#Email").val("");
+            $("#DateOfBirth").val("");
+            $("#DepartmentId").val("");
+
+            $(".readonly-field").prop("readonly", false);
+            $("#DepartmentId").prop("disabled", false);
+            $("#saveButton").removeClass("d-none");
+            $("#editButton").text("Cancel");
+
+            $("#formTitle").text("Add New Person");
+        }
+
+        function addPersonToTable(person) {
+            var newRow = `<tr id="personRow-${person.id}" onclick="loadPerson(${person.id}, '${person.firstName}', '${person.lastName}', '${person.email}', '${person.dateOfBirth}', '${person.departmentName}')">
+                            <td>${person.firstName}</td>
+                            <td>${person.lastName}</td>
+                            <td>${person.email}</td>
+                            <td>${person.dateOfBirth}</td>
+                            <td>${person.departmentName}</td>
+                            <td><button class="btn btn-danger btn-sm" onclick="deletePerson(${person.id}, event)">Delete</button></td>
+                          </tr>`;
+            $("#peopleTable tbody").append(newRow);
+            attachRowClickHandlers();
+        }
+
+        function updatePersonInTable(person) {
+            var row = $("#personRow-" + person.id);
+            row.html(`<td>${person.firstName}</td>
+                      <td>${person.lastName}</td>
+                      <td>${person.email}</td>
+                      <td>${person.dateOfBirth}</td>
+                      <td>${person.departmentName}</td>
+                      <td><button class="btn btn-danger btn-sm" onclick="deletePerson(${person.id}, event)">Delete</button></td>`);
+            attachRowClickHandlers();
+        }
+
+        function deletePerson(id, event) {
+            event.stopPropagation();
+            if (!confirm("Are you sure you want to delete this person?")) return;
+
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("DeletePerson", "Home")",
+                data: { id: id },
+                success: function () {
+                    $("#personRow-" + id).remove();
+                },
+                error: function (xhr) {
+                    alert("Error: " + xhr.responseText);
+                }
+            });
+        }
+    </script>
+}

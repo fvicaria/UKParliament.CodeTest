@@ -1,0 +1,196 @@
+2025-03-11 08:39:38.434 +00:00 [INF] Starting application...
+2025-03-11 08:39:39.186 +00:00 [INF] User profile is available. Using 'C:\Users\fvica\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-11 08:39:39.457 +00:00 [INF] Now listening on: https://localhost:7023
+2025-03-11 08:39:39.459 +00:00 [INF] Now listening on: http://localhost:5153
+2025-03-11 08:39:39.520 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-11 08:39:39.522 +00:00 [INF] Hosting environment: Development
+2025-03-11 08:39:39.524 +00:00 [INF] Content root path: E:\Temp\product-lead-developer-home-exercise-main\product-lead-developer-home-exercise-main\UKParliament.CodeTest.Web
+2025-03-11 08:39:40.433 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7023/ - null null
+2025-03-11 08:39:40.662 +00:00 [INF] Executing endpoint 'UKParliament.CodeTest.Web.Controllers.HomeController.Index (UKParliament.CodeTest.Web)'
+2025-03-11 08:39:40.720 +00:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller UKParliament.CodeTest.Web.Controllers.HomeController (UKParliament.CodeTest.Web).
+2025-03-11 08:39:40.758 +00:00 [INF] Start processing HTTP request GET https://localhost:7003/api/department
+2025-03-11 08:39:40.764 +00:00 [INF] Sending HTTP request GET https://localhost:7003/api/department
+2025-03-11 08:39:40.971 +00:00 [INF] Received HTTP response headers after 201.2847ms - 200
+2025-03-11 08:39:40.977 +00:00 [INF] End processing HTTP request after 222.7441ms - 200
+2025-03-11 08:39:41.003 +00:00 [INF] Start processing HTTP request GET https://localhost:7003/api/person
+2025-03-11 08:39:41.005 +00:00 [INF] Sending HTTP request GET https://localhost:7003/api/person
+2025-03-11 08:39:41.162 +00:00 [INF] Received HTTP response headers after 155.8936ms - 200
+2025-03-11 08:39:41.166 +00:00 [INF] End processing HTTP request after 163.0484ms - 200
+2025-03-11 08:39:41.195 +00:00 [INF] Loaded Index page with 2 people and 4 departments.
+2025-03-11 08:39:41.209 +00:00 [INF] Executing ViewResult, running view Index.
+2025-03-11 08:39:41.355 +00:00 [INF] Executed ViewResult - view Index executed in 150.7603ms.
+2025-03-11 08:39:41.358 +00:00 [INF] Executed action UKParliament.CodeTest.Web.Controllers.HomeController.Index (UKParliament.CodeTest.Web) in 632.6301ms
+2025-03-11 08:39:41.360 +00:00 [INF] Executed endpoint 'UKParliament.CodeTest.Web.Controllers.HomeController.Index (UKParliament.CodeTest.Web)'
+2025-03-11 08:39:41.366 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7023/ - 200 null text/html; charset=utf-8 946.6549ms
+2025-03-11 08:39:41.388 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7023/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2025-03-11 08:39:41.394 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7023/css/site.css?v=j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg - null null
+2025-03-11 08:39:41.395 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7023/lib/jquery/dist/jquery.min.js - null null
+2025-03-11 08:39:41.394 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7023/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-11 08:39:41.394 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7023/UKParliament.CodeTest.Web2.styles.css - null null
+2025-03-11 08:39:41.394 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7023/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2025-03-11 08:39:41.444 +00:00 [INF] The file /lib/jquery/dist/jquery.min.js was not modified
+2025-03-11 08:39:41.456 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7023/UKParliament.CodeTest.Web2.styles.css - 404 0 null 61.9513ms
+2025-03-11 08:39:41.473 +00:00 [INF] The file /lib/bootstrap/dist/js/bootstrap.bundle.min.js was not modified
+2025-03-11 08:39:41.427 +00:00 [INF] The file /css/site.css was not modified
+2025-03-11 08:39:41.395 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7023/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - null null
+2025-03-11 08:39:41.407 +00:00 [INF] The file /lib/bootstrap/dist/css/bootstrap.min.css was not modified
+2025-03-11 08:39:41.418 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7023/_vs/browserLink - null null
+2025-03-11 08:39:41.474 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7023/_framework/aspnetcore-browser-refresh.js - 200 12720 application/javascript; charset=utf-8 79.8933ms
+2025-03-11 08:39:41.477 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7023/lib/jquery/dist/jquery.min.js - 304 null text/javascript 82.1268ms
+2025-03-11 08:39:41.485 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7023/UKParliament.CodeTest.Web2.styles.css, Response status code: 404
+2025-03-11 08:39:41.486 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7023/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 304 null text/javascript 92.305ms
+2025-03-11 08:39:41.489 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7023/css/site.css?v=j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg - 304 null text/css 94.768ms
+2025-03-11 08:39:41.495 +00:00 [INF] The file /js/site.js was not modified
+2025-03-11 08:39:41.496 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7023/lib/bootstrap/dist/css/bootstrap.min.css - 304 null text/css 108.6352ms
+2025-03-11 08:39:41.528 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7023/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - 304 null text/javascript 132.6544ms
+2025-03-11 08:39:41.547 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7023/_vs/browserLink - 200 null text/javascript; charset=UTF-8 128.5036ms
+2025-03-11 08:39:55.312 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7023/Person - null null
+2025-03-11 08:39:55.324 +00:00 [INF] Executing endpoint 'UKParliament.CodeTest.Web.Controllers.PersonController.Index (UKParliament.CodeTest.Web)'
+2025-03-11 08:39:55.329 +00:00 [INF] Route matched with {action = "Index", controller = "Person"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller UKParliament.CodeTest.Web.Controllers.PersonController (UKParliament.CodeTest.Web).
+2025-03-11 08:39:55.332 +00:00 [INF] Start processing HTTP request GET https://localhost:7003/api/person
+2025-03-11 08:39:55.334 +00:00 [INF] Sending HTTP request GET https://localhost:7003/api/person
+2025-03-11 08:39:55.361 +00:00 [INF] Received HTTP response headers after 25.5129ms - 200
+2025-03-11 08:39:55.363 +00:00 [INF] End processing HTTP request after 30.4868ms - 200
+2025-03-11 08:39:55.367 +00:00 [INF] Executing ViewResult, running view Index.
+2025-03-11 08:39:55.376 +00:00 [INF] Executed ViewResult - view Index executed in 10.4019ms.
+2025-03-11 08:39:55.379 +00:00 [INF] Executed action UKParliament.CodeTest.Web.Controllers.PersonController.Index (UKParliament.CodeTest.Web) in 47.2964ms
+2025-03-11 08:39:55.381 +00:00 [INF] Executed endpoint 'UKParliament.CodeTest.Web.Controllers.PersonController.Index (UKParliament.CodeTest.Web)'
+2025-03-11 08:39:55.384 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7023/Person - 200 null text/html; charset=utf-8 72.525ms
+2025-03-11 08:39:55.423 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7023/UKParliament.CodeTest.Web2.styles.css - null null
+2025-03-11 08:39:55.429 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7023/_vs/browserLink - null null
+2025-03-11 08:39:55.428 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7023/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-11 08:39:55.430 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7023/UKParliament.CodeTest.Web2.styles.css - 404 0 null 8.4948ms
+2025-03-11 08:39:55.453 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7023/_framework/aspnetcore-browser-refresh.js - 200 12720 application/javascript; charset=utf-8 25.6065ms
+2025-03-11 08:39:55.459 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7023/UKParliament.CodeTest.Web2.styles.css, Response status code: 404
+2025-03-11 08:39:55.489 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7023/_vs/browserLink - 200 null text/javascript; charset=UTF-8 60.8812ms
+2025-03-11 08:39:56.824 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7023/Department - null null
+2025-03-11 08:39:56.834 +00:00 [INF] Executing endpoint 'UKParliament.CodeTest.Web2.Controllers.DepartmentController.Index (UKParliament.CodeTest.Web)'
+2025-03-11 08:39:56.838 +00:00 [INF] Route matched with {action = "Index", controller = "Department"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller UKParliament.CodeTest.Web2.Controllers.DepartmentController (UKParliament.CodeTest.Web).
+2025-03-11 08:39:56.842 +00:00 [INF] Start processing HTTP request GET https://localhost:7003/api/department
+2025-03-11 08:39:56.844 +00:00 [INF] Sending HTTP request GET https://localhost:7003/api/department
+2025-03-11 08:39:56.872 +00:00 [INF] Received HTTP response headers after 25.9032ms - 200
+2025-03-11 08:39:56.875 +00:00 [INF] End processing HTTP request after 32.976ms - 200
+2025-03-11 08:39:56.883 +00:00 [INF] Executing ViewResult, running view Index.
+2025-03-11 08:39:56.898 +00:00 [INF] Executed ViewResult - view Index executed in 15.7851ms.
+2025-03-11 08:39:56.902 +00:00 [INF] Executed action UKParliament.CodeTest.Web2.Controllers.DepartmentController.Index (UKParliament.CodeTest.Web) in 61.5646ms
+2025-03-11 08:39:56.905 +00:00 [INF] Executed endpoint 'UKParliament.CodeTest.Web2.Controllers.DepartmentController.Index (UKParliament.CodeTest.Web)'
+2025-03-11 08:39:56.908 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7023/Department - 200 null text/html; charset=utf-8 85.2506ms
+2025-03-11 08:39:56.929 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7023/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-11 08:39:56.930 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7023/_vs/browserLink - null null
+2025-03-11 08:39:56.929 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7023/UKParliament.CodeTest.Web2.styles.css - null null
+2025-03-11 08:39:56.935 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7023/_framework/aspnetcore-browser-refresh.js - 200 12720 application/javascript; charset=utf-8 5.5833ms
+2025-03-11 08:39:56.943 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7023/UKParliament.CodeTest.Web2.styles.css - 404 0 null 13.536ms
+2025-03-11 08:39:56.958 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7023/UKParliament.CodeTest.Web2.styles.css, Response status code: 404
+2025-03-11 08:39:56.965 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7023/_vs/browserLink - 200 null text/javascript; charset=UTF-8 35.0491ms
+2025-03-11 08:40:00.154 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7023/Person - null null
+2025-03-11 08:40:00.162 +00:00 [INF] Executing endpoint 'UKParliament.CodeTest.Web.Controllers.PersonController.Index (UKParliament.CodeTest.Web)'
+2025-03-11 08:40:00.164 +00:00 [INF] Route matched with {action = "Index", controller = "Person"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller UKParliament.CodeTest.Web.Controllers.PersonController (UKParliament.CodeTest.Web).
+2025-03-11 08:40:00.167 +00:00 [INF] Start processing HTTP request GET https://localhost:7003/api/person
+2025-03-11 08:40:00.169 +00:00 [INF] Sending HTTP request GET https://localhost:7003/api/person
+2025-03-11 08:40:00.200 +00:00 [INF] Received HTTP response headers after 29.0834ms - 200
+2025-03-11 08:40:00.202 +00:00 [INF] End processing HTTP request after 34.3032ms - 200
+2025-03-11 08:40:00.214 +00:00 [INF] Executing ViewResult, running view Index.
+2025-03-11 08:40:00.223 +00:00 [INF] Executed ViewResult - view Index executed in 9.9542ms.
+2025-03-11 08:40:00.227 +00:00 [INF] Executed action UKParliament.CodeTest.Web.Controllers.PersonController.Index (UKParliament.CodeTest.Web) in 59.9507ms
+2025-03-11 08:40:00.230 +00:00 [INF] Executed endpoint 'UKParliament.CodeTest.Web.Controllers.PersonController.Index (UKParliament.CodeTest.Web)'
+2025-03-11 08:40:00.233 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7023/Person - 200 null text/html; charset=utf-8 79.8129ms
+2025-03-11 08:40:00.264 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7023/UKParliament.CodeTest.Web2.styles.css - null null
+2025-03-11 08:40:00.270 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7023/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-11 08:40:00.270 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7023/_vs/browserLink - null null
+2025-03-11 08:40:00.271 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7023/UKParliament.CodeTest.Web2.styles.css - 404 0 null 8.0682ms
+2025-03-11 08:40:00.277 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7023/_framework/aspnetcore-browser-refresh.js - 200 12720 application/javascript; charset=utf-8 8.5478ms
+2025-03-11 08:40:00.295 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7023/UKParliament.CodeTest.Web2.styles.css, Response status code: 404
+2025-03-11 08:40:00.316 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7023/_vs/browserLink - 200 null text/javascript; charset=UTF-8 47.1494ms
+2025-03-11 08:40:01.313 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7023/ - null null
+2025-03-11 08:40:01.320 +00:00 [INF] Executing endpoint 'UKParliament.CodeTest.Web.Controllers.HomeController.Index (UKParliament.CodeTest.Web)'
+2025-03-11 08:40:01.321 +00:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller UKParliament.CodeTest.Web.Controllers.HomeController (UKParliament.CodeTest.Web).
+2025-03-11 08:40:01.323 +00:00 [INF] Start processing HTTP request GET https://localhost:7003/api/person
+2025-03-11 08:40:01.325 +00:00 [INF] Sending HTTP request GET https://localhost:7003/api/person
+2025-03-11 08:40:01.345 +00:00 [INF] Received HTTP response headers after 19.1906ms - 200
+2025-03-11 08:40:01.347 +00:00 [INF] End processing HTTP request after 23.5588ms - 200
+2025-03-11 08:40:01.349 +00:00 [INF] Loaded Index page with 2 people and 4 departments.
+2025-03-11 08:40:01.351 +00:00 [INF] Executing ViewResult, running view Index.
+2025-03-11 08:40:01.359 +00:00 [INF] Executed ViewResult - view Index executed in 7.9992ms.
+2025-03-11 08:40:01.361 +00:00 [INF] Executed action UKParliament.CodeTest.Web.Controllers.HomeController.Index (UKParliament.CodeTest.Web) in 38.232ms
+2025-03-11 08:40:01.363 +00:00 [INF] Executed endpoint 'UKParliament.CodeTest.Web.Controllers.HomeController.Index (UKParliament.CodeTest.Web)'
+2025-03-11 08:40:01.365 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7023/ - 200 null text/html; charset=utf-8 52.7165ms
+2025-03-11 08:40:01.394 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7023/UKParliament.CodeTest.Web2.styles.css - null null
+2025-03-11 08:40:01.398 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7023/_vs/browserLink - null null
+2025-03-11 08:40:01.398 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7023/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-11 08:40:01.403 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7023/UKParliament.CodeTest.Web2.styles.css - 404 0 null 9.3156ms
+2025-03-11 08:40:01.419 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7023/_framework/aspnetcore-browser-refresh.js - 200 12720 application/javascript; charset=utf-8 21.8404ms
+2025-03-11 08:40:01.431 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7023/UKParliament.CodeTest.Web2.styles.css, Response status code: 404
+2025-03-11 08:40:01.439 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7023/_vs/browserLink - 200 null text/javascript; charset=UTF-8 40.7569ms
+2025-03-11 08:40:06.410 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7023/Home/Privacy - null null
+2025-03-11 08:40:06.418 +00:00 [INF] Executing endpoint 'UKParliament.CodeTest.Web.Controllers.HomeController.Privacy (UKParliament.CodeTest.Web)'
+2025-03-11 08:40:06.421 +00:00 [INF] Route matched with {action = "Privacy", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Privacy() on controller UKParliament.CodeTest.Web.Controllers.HomeController (UKParliament.CodeTest.Web).
+2025-03-11 08:40:06.424 +00:00 [INF] Executing ViewResult, running view Privacy.
+2025-03-11 08:40:06.432 +00:00 [INF] Executed ViewResult - view Privacy executed in 8.0733ms.
+2025-03-11 08:40:06.434 +00:00 [INF] Executed action UKParliament.CodeTest.Web.Controllers.HomeController.Privacy (UKParliament.CodeTest.Web) in 10.9157ms
+2025-03-11 08:40:06.436 +00:00 [INF] Executed endpoint 'UKParliament.CodeTest.Web.Controllers.HomeController.Privacy (UKParliament.CodeTest.Web)'
+2025-03-11 08:40:06.437 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7023/Home/Privacy - 200 null text/html; charset=utf-8 28.6724ms
+2025-03-11 08:40:06.457 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7023/UKParliament.CodeTest.Web2.styles.css - null null
+2025-03-11 08:40:06.462 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7023/UKParliament.CodeTest.Web2.styles.css - 404 0 null 5.2397ms
+2025-03-11 08:40:06.462 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7023/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-11 08:40:06.463 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7023/_vs/browserLink - null null
+2025-03-11 08:40:06.473 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7023/UKParliament.CodeTest.Web2.styles.css, Response status code: 404
+2025-03-11 08:40:06.476 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7023/_framework/aspnetcore-browser-refresh.js - 200 12720 application/javascript; charset=utf-8 13.8413ms
+2025-03-11 08:40:06.519 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7023/_vs/browserLink - 200 null text/javascript; charset=UTF-8 56.9222ms
+2025-03-11 08:40:11.863 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7023/Department - null null
+2025-03-11 08:40:11.873 +00:00 [INF] Executing endpoint 'UKParliament.CodeTest.Web2.Controllers.DepartmentController.Index (UKParliament.CodeTest.Web)'
+2025-03-11 08:40:11.874 +00:00 [INF] Route matched with {action = "Index", controller = "Department"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller UKParliament.CodeTest.Web2.Controllers.DepartmentController (UKParliament.CodeTest.Web).
+2025-03-11 08:40:11.877 +00:00 [INF] Start processing HTTP request GET https://localhost:7003/api/department
+2025-03-11 08:40:11.879 +00:00 [INF] Sending HTTP request GET https://localhost:7003/api/department
+2025-03-11 08:40:11.903 +00:00 [INF] Received HTTP response headers after 21.6767ms - 200
+2025-03-11 08:40:11.905 +00:00 [INF] End processing HTTP request after 28.11ms - 200
+2025-03-11 08:40:11.909 +00:00 [INF] Executing ViewResult, running view Index.
+2025-03-11 08:40:11.917 +00:00 [INF] Executed ViewResult - view Index executed in 8.529ms.
+2025-03-11 08:40:11.924 +00:00 [INF] Executed action UKParliament.CodeTest.Web2.Controllers.DepartmentController.Index (UKParliament.CodeTest.Web) in 46.4556ms
+2025-03-11 08:40:11.927 +00:00 [INF] Executed endpoint 'UKParliament.CodeTest.Web2.Controllers.DepartmentController.Index (UKParliament.CodeTest.Web)'
+2025-03-11 08:40:11.929 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7023/Department - 200 null text/html; charset=utf-8 67.1893ms
+2025-03-11 08:40:11.964 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7023/UKParliament.CodeTest.Web2.styles.css - null null
+2025-03-11 08:40:11.971 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7023/UKParliament.CodeTest.Web2.styles.css - 404 0 null 7.7761ms
+2025-03-11 08:40:11.973 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7023/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-11 08:40:11.975 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7023/_vs/browserLink - null null
+2025-03-11 08:40:11.980 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7023/UKParliament.CodeTest.Web2.styles.css, Response status code: 404
+2025-03-11 08:40:11.988 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7023/_framework/aspnetcore-browser-refresh.js - 200 12720 application/javascript; charset=utf-8 14.8776ms
+2025-03-11 08:40:12.022 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7023/_vs/browserLink - 200 null text/javascript; charset=UTF-8 47.8577ms
+2025-03-11 08:40:12.884 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7023/Person - null null
+2025-03-11 08:40:12.894 +00:00 [INF] Executing endpoint 'UKParliament.CodeTest.Web.Controllers.PersonController.Index (UKParliament.CodeTest.Web)'
+2025-03-11 08:40:12.895 +00:00 [INF] Route matched with {action = "Index", controller = "Person"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller UKParliament.CodeTest.Web.Controllers.PersonController (UKParliament.CodeTest.Web).
+2025-03-11 08:40:12.898 +00:00 [INF] Start processing HTTP request GET https://localhost:7003/api/person
+2025-03-11 08:40:12.900 +00:00 [INF] Sending HTTP request GET https://localhost:7003/api/person
+2025-03-11 08:40:12.922 +00:00 [INF] Received HTTP response headers after 20.3109ms - 200
+2025-03-11 08:40:12.924 +00:00 [INF] End processing HTTP request after 26.0886ms - 200
+2025-03-11 08:40:12.927 +00:00 [INF] Executing ViewResult, running view Index.
+2025-03-11 08:40:12.933 +00:00 [INF] Executed ViewResult - view Index executed in 6.791ms.
+2025-03-11 08:40:12.937 +00:00 [INF] Executed action UKParliament.CodeTest.Web.Controllers.PersonController.Index (UKParliament.CodeTest.Web) in 38.7315ms
+2025-03-11 08:40:12.939 +00:00 [INF] Executed endpoint 'UKParliament.CodeTest.Web.Controllers.PersonController.Index (UKParliament.CodeTest.Web)'
+2025-03-11 08:40:12.941 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7023/Person - 200 null text/html; charset=utf-8 57.8492ms
+2025-03-11 08:40:12.974 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7023/UKParliament.CodeTest.Web2.styles.css - null null
+2025-03-11 08:40:12.981 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7023/UKParliament.CodeTest.Web2.styles.css - 404 0 null 8.2084ms
+2025-03-11 08:40:12.982 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7023/_vs/browserLink - null null
+2025-03-11 08:40:12.981 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7023/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-11 08:40:12.988 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7023/UKParliament.CodeTest.Web2.styles.css, Response status code: 404
+2025-03-11 08:40:13.002 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7023/_framework/aspnetcore-browser-refresh.js - 200 12720 application/javascript; charset=utf-8 21.034ms
+2025-03-11 08:40:13.040 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7023/_vs/browserLink - 200 null text/javascript; charset=UTF-8 58.0333ms
+2025-03-11 08:40:13.659 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7023/ - null null
+2025-03-11 08:40:13.668 +00:00 [INF] Executing endpoint 'UKParliament.CodeTest.Web.Controllers.HomeController.Index (UKParliament.CodeTest.Web)'
+2025-03-11 08:40:13.670 +00:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller UKParliament.CodeTest.Web.Controllers.HomeController (UKParliament.CodeTest.Web).
+2025-03-11 08:40:13.673 +00:00 [INF] Start processing HTTP request GET https://localhost:7003/api/person
+2025-03-11 08:40:13.674 +00:00 [INF] Sending HTTP request GET https://localhost:7003/api/person
+2025-03-11 08:40:13.702 +00:00 [INF] Received HTTP response headers after 25.8763ms - 200
+2025-03-11 08:40:13.704 +00:00 [INF] End processing HTTP request after 31.4816ms - 200
+2025-03-11 08:40:13.708 +00:00 [INF] Loaded Index page with 2 people and 4 departments.
+2025-03-11 08:40:13.711 +00:00 [INF] Executing ViewResult, running view Index.
+2025-03-11 08:40:13.721 +00:00 [INF] Executed ViewResult - view Index executed in 10.0695ms.
+2025-03-11 08:40:13.723 +00:00 [INF] Executed action UKParliament.CodeTest.Web.Controllers.HomeController.Index (UKParliament.CodeTest.Web) in 50.0611ms
+2025-03-11 08:40:13.724 +00:00 [INF] Executed endpoint 'UKParliament.CodeTest.Web.Controllers.HomeController.Index (UKParliament.CodeTest.Web)'
+2025-03-11 08:40:13.725 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7023/ - 200 null text/html; charset=utf-8 66.9231ms
+2025-03-11 08:40:13.748 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7023/UKParliament.CodeTest.Web2.styles.css - null null
+2025-03-11 08:40:13.748 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7023/_vs/browserLink - null null
+2025-03-11 08:40:13.748 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7023/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-11 08:40:13.752 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7023/UKParliament.CodeTest.Web2.styles.css - 404 0 null 5.0345ms
+2025-03-11 08:40:13.765 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7023/_framework/aspnetcore-browser-refresh.js - 200 12720 application/javascript; charset=utf-8 16.973ms
+2025-03-11 08:40:13.774 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7023/UKParliament.CodeTest.Web2.styles.css, Response status code: 404
+2025-03-11 08:40:13.790 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7023/_vs/browserLink - 200 null text/javascript; charset=UTF-8 42.3906ms

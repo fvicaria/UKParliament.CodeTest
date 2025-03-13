@@ -1,0 +1,48 @@
+﻿@model IEnumerable<UKParliament.CodeTest.Common.Entities.Department>
+
+@{
+    ViewData["Title"] = "Departments";
+}
+
+<div class="container">
+    <h2>Departments</h2>
+
+    <table class="table table-hover shadow-sm">
+        <thead class="table-dark">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var department in Model)
+            {
+                <tr>
+                    <td>@department.Id</td>
+                    <td>@department.Name</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<style>
+    /* UK Parliament styling */
+    h1 {
+        color: #005ea5;
+    }
+
+    .table-hover tbody tr:hover {
+        background-color: #f8f9fa !important;
+    }
+
+    .btn-success {
+        background-color: #00823b;
+        border-color: #00823b;
+    }
+
+        .btn-success:hover {
+            background-color: #00692f;
+            border-color: #00692f;
+        }
+</style>

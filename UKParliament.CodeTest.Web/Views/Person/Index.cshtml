@@ -1,0 +1,53 @@
+﻿@model IEnumerable<UKParliament.CodeTest.Common.Entities.Person>
+
+@{
+    ViewData["Title"] = "People";
+}
+
+<div class="container">
+
+    <h2>People</h2>
+
+    <table class="table table-hover shadow-sm">
+        <thead class="table-dark">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Department</th>
+                <th>Date of Birth</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var person in Model)
+            {
+                <tr>
+                    <td>@person.FirstName</td>
+                    <td>@person.LastName</td>
+                    <td>@person.Department?.Name</td>
+                    <td>@person.DateOfBirth?.ToShortDateString()</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<style>
+    /* UK Parliament styling */
+    h1 {
+        color: #005ea5;
+    }
+
+    .table-hover tbody tr:hover {
+        background-color: #f8f9fa !important;
+    }
+
+    .btn-success {
+        background-color: #00823b;
+        border-color: #00823b;
+    }
+
+        .btn-success:hover {
+            background-color: #00692f;
+            border-color: #00692f;
+        }
+</style>
